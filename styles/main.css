@@ -306,6 +306,16 @@ h2 {
     }
 }
 
+/* footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    color: #ffffff;
+}
+footer a {
+    color: #ffffff;
+}
 /* mobile layout */
 
 /* tablet */
