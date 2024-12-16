@@ -1,0 +1,373 @@
+/* global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --timeline-width: 4px;
+    --dot-size: 20px;
+    --primary-color: #ff0055;
+    --secondary-color: #000066;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+/* timeline */
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 50px 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--timeline-width);
+    height: 100%;
+    background: linear-gradient(180deg, 
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.3),
+        rgba(255,255,255,0.1)
+    );
+}
+
+/* timeline items */
+.timeline-item {
+    width: calc(50% - 40px);
+    margin: 100px 0;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-left: auto;
+    transform: translateX(20px);
+}
+
+.timeline-item:nth-child(even) {
+    transform: translateX(-20px);
+}
+
+.timeline-item.kinkane-theme {
+    margin-right: auto;
+    margin-left: 0;
+    padding-right: 60px;
+    transform: translateX(-20px);
+}
+
+.timeline-item.kinkane-theme::before {
+    right: -10px;
+    left: auto;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    top: 20px;
+}
+
+.timeline-item:nth-child(odd)::before {
+    left: -50px;
+}
+
+.timeline-item:nth-child(even)::before {
+    right: -50px;
+}
+
+.album-content {
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.album-content:hover {
+    transform: translateY(-10px);
+}
+
+/* album themes */
+.theweeknd-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(255,0,85,0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+.kinkane-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(142,68,173,0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.hob-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(44,24,16,0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.thursday-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(211,84,0,0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.eos-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(160, 38, 22, 0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.trilogy-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(160, 160, 160, 0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.kissland-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(68, 173, 108, 0.8),
+        rgba(0, 0, 0, 0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.bbtm-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(44,62,80,0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.starboy-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(230,49,75,0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.mdm-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(185, 108, 41, 0.8),
+        rgba(20, 15, 9, 0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.afterhours-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(173, 68, 68, 0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.dawnfm-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(22, 84, 160, 0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.upcoming-theme .album-content {
+    background: linear-gradient(145deg, 
+        rgba(67, 39, 16, 0.8),
+        rgba(0,0,0,0.9)
+    );
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+/* typography */
+header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.header-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* soundcloud */
+.soundcloud-embed {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* animations */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-left: 60px !important;
+    }
+    
+    .timeline-item::before {
+        left: -45px !important;
+    }
+}
+
+/* mobile layout */
+
+/* tablet */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        width: 90%;
+        margin: 50px auto !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
+
+    .timeline-item::before {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: -30px;
+    }
+
+    .album-content {
+        padding: 20px;
+    }
+
+    .album-content img {
+        max-width: 250px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .album-info {
+        text-align: center;
+    }
+
+    .soundcloud-embed {
+        max-width: 100%;
+        margin: 20px auto 0;
+    }
+}
+
+/* phone */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .timeline-item {
+        width: 95%;
+    }
+
+    .album-content {
+        padding: 15px;
+    }
+
+    .album-content img {
+        max-width: 200px;
+    }
+}
