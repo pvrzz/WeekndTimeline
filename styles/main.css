@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --timeline-width: 4px;
     --dot-size: 20px;
@@ -365,7 +364,6 @@ h2 {
         left: -45px !important;
     }
 }
-
 /* footer */
 footer {
     text-align: center;
