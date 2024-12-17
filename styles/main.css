@@ -12,13 +12,22 @@
     --primary-color: #ff0055;
     --secondary-color: #000066;
 }
-
+/* general body styles */
 body {
     font-family: 'Poppins', sans-serif;
     background: #000;
     color: #fff;
     line-height: 1.6;
 }
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* timeline */
 .timeline {
     max-width: 1200px;
@@ -289,7 +298,6 @@ header {
     align-items: center;
     overflow: hidden;
 }
-
 .header-btn {
     z-index: 4;
     position: relative;
@@ -302,7 +310,6 @@ header {
     background: #3c3c3c;
     transition: background 0.3s ease;
 }
-
 .header-btn:hover {
     background: #848484;
 }
@@ -397,24 +404,27 @@ footer {
 }
 footer a {
     color: #ffffff;
-
 }
 
 /* buttons */
 .btn {
-    border: none;
     display: inline-block;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
     background: #3c3c3c;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
 }
+
 .btn:hover {
     background: #848484;
+    text-decoration: none;
 }
+
 /* mobile layout */
 
 /* tablet */
