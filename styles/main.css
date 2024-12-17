@@ -142,8 +142,8 @@ body {
 
 .eos-theme .album-content {
     background: linear-gradient(145deg, 
-        rgba(160, 38, 22, 0.8),
-        rgba(0,0,0,0.9)
+        rgba(209, 41, 19, 0.8),
+        rgba(56, 21, 21, 0.9)
     );
     background-size: 200% 200%;
     animation: gradientFlow 15s ease infinite;
@@ -222,7 +222,7 @@ body {
 }
 .thenoise-theme .album-content {
     background: linear-gradient(145deg, 
-        rgba(138, 46, 78, 0.8),
+        rgba(201, 45, 100, 0.8),
         rgba(0,0,0,0.9)
     );
     background-size: 200% 200%;
