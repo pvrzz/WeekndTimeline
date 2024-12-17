@@ -42,6 +42,35 @@ body {
     );
 }
 
+.timeline-contrib {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 50px 20px;
+}
+
+.timeline-contrib::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--timeline-width);
+    height: 100%;
+    background: linear-gradient(180deg, 
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.3),
+        rgba(255,255,255,0.1)
+    );
+}
+
+.timeline-contrib a {
+    color: #fff;
+    font-weight: 600;
+}
+.timeline-contrib p {
+    color: #fff;
+    font-weight: 600;
+}
 /* timeline items */
 .timeline-item {
     width: calc(50% - 40px);
@@ -239,6 +268,23 @@ header {
     overflow: hidden;
 }
 
+.header-btn {
+    z-index: 3;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: #3c3c3c;
+    transition: background 0.3s ease;
+}
+
+.header-btn:hover {
+    background: #848484;
+}
+
 .header-video {
     position: absolute;
     top: 0;
@@ -279,8 +325,14 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     font-weight: 600;
+    background: linear-gradient(45deg, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    position: relative;
+    z-index: 2;
 }
 
 /* soundcloud */
@@ -324,6 +376,23 @@ footer {
 }
 footer a {
     color: #ffffff;
+
+}
+
+/* buttons */
+.btn {
+    border: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: #3c3c3c;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: #848484;
 }
 /* mobile layout */
 

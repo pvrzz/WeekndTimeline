@@ -7,6 +7,3 @@
 > Explore the remarkable journey of Abel Makkonen Tesfaye, known worldwide as The Weeknd, through this interactive timeline.
 
 [🌐 Visit The Timeline](https://xotwod.pages.dev/)
-
-Packages used:
-[UnPkg AOS](https://unpkg.com/aos@next/)
