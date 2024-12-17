@@ -70,6 +70,29 @@ body {
     color: #fff;
     font-weight: 600;
 }
+
+/* contrib page */
+    .contribute-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+    .contribute-section a {
+        color: #fff;
+        font-weight: 600;
+    }
+    .contribute-section a {
+        color: #fff;
+        font-weight: 600;
+    }
+
 /* timeline items */
 .timeline-item {
     width: calc(50% - 40px);
