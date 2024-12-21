@@ -15,17 +15,27 @@
 /* general body styles */
 body {
     font-family: 'Poppins', sans-serif;
+    position: relative;
     background: #000;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
     color: #fff;
 }
-
 a:hover {
     text-decoration: underline;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* timeline */
@@ -33,7 +43,7 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    padding: 50px 20px;
+    z-index: 1;
 }
 
 .timeline::before {
@@ -296,6 +306,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
     overflow: hidden;
 }
 .header-btn {
@@ -318,10 +329,16 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    filter: brightness(0.7);
+    transition: filter 0.5s ease;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
+    z-index: -1;
+}
+
+.header-video:hover {
+    filter: brightness(0.9);
 }
 
 .header-content {
@@ -386,8 +403,15 @@ h2 {
     }
     
     .timeline-item {
+        backdrop-filter: blur (8px);
+        -webkit-backdrop-filter: blur(8px);
         width: 100%;
         margin-left: 60px !important;
+    }
+     
+    .album-content {
+        margin: 10px;
+        padding: 15px;
     }
     
     .timeline-item::before {
